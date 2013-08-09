@@ -3,11 +3,17 @@ package com.unochapeco.androidii;
 import java.util.ArrayList;
 import java.util.List;
 
+
 import com.unochapeco.androidii.adapter.ListaFotosAdapter;
 import com.unochapeco.androidii.task.ListarFotosTask;
+
+import android.net.Uri;
 import android.os.Bundle;
 import android.app.ListActivity;
+import android.content.Intent;
 import android.view.Menu;
+import android.view.View;
+import android.widget.ListView;
 
 public class ListaFotosActivity extends ListActivity {
 	
@@ -34,6 +40,18 @@ public class ListaFotosActivity extends ListActivity {
 		this.listaFotos.clear();
 		this.listaFotos.addAll(fotos);
 		this.adapter.notifyDataSetChanged();
+	}
+	
+	@Override
+	protected void onListItemClick(ListView l, View v, int position, long id) {
+		Fotos fotoSelecionada = this.listaFotos.get(position);
+		
+		Uri uriFoto = Uri.parse(fotoSelecionada.getImage());
+		
+		Intent intent = new Intent(this, VisualizarFotoActivity.class);
+		intent.setData(uriFoto);
+		
+		startActivity(intent);
 	}
 	
 	@Override
