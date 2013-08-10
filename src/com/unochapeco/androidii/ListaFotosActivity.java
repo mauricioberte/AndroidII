@@ -2,16 +2,14 @@ package com.unochapeco.androidii;
 
 import java.util.ArrayList;
 import java.util.List;
-
-
 import com.unochapeco.androidii.adapter.ListaFotosAdapter;
 import com.unochapeco.androidii.task.ListarFotosTask;
-
 import android.net.Uri;
 import android.os.Bundle;
 import android.app.ListActivity;
 import android.content.Intent;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ListView;
 
@@ -58,6 +56,15 @@ public class ListaFotosActivity extends ListActivity {
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.lista_fotos, menu);
+		return true;
+	}
+	
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		
+		Intent i = new Intent(this, EnviaImagemActivity.class);
+		this.startActivityForResult(i, 0);
+		
 		return true;
 	}
 

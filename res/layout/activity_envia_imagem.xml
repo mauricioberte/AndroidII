@@ -8,54 +8,75 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".EnviaImagemActivity" >
 
-    <RelativeLayout
-        android:id="@+id/relativeLayout1"
+    <TableLayout
+        android:id="@+id/tableLayout1"
         android:layout_width="fill_parent"
-        android:layout_height="40dp"
-        android:layout_alignParentTop="true"
-        android:background="#cccccc" >
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#cccccc"
+        android:orientation="horizontal"
+        android:stretchColumns="*" >
 
-        <TextView
-            android:id="@+id/textView1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:text="@string/imagem" />
-    </RelativeLayout>
+        <TableRow>
+
+            <Button
+                android:id="@+id/btnEnviar"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dip"
+                android:text="Enviar" />
+
+            <Button
+                android:id="@+id/btnCancelar"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dip"
+                android:text="Cancelar" />
+        </TableRow>
+    </TableLayout>
 
     <ImageView
         android:id="@+id/imageViewEnvia"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/relativeLayout1"
         android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
         android:src="@drawable/ic_launcher" />
-    
-     <TableLayout 
- 	    android:layout_width="fill_parent"
-		android:layout_height="wrap_content" 
-		android:layout_alignParentBottom="true" 
-		android:orientation="horizontal"
-		android:stretchColumns="*"
-		android:background="#cccccc">
-			<TableRow >
 
-			 	<Button
-			 	    android:id="@+id/btnEnviar"
-			 	    android:layout_width="fill_parent"
-			 	    android:layout_height="wrap_content"
-			 	    android:layout_margin="5dip"
-			 	    android:text="Enviar" />
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/relativeLayout1"
+        android:layout_alignParentTop="true"
+        android:text="@string/selecionar_imagem" />
 
-			 	<Button
-			 	    android:id="@+id/btnCancelar"
-			 	    android:layout_width="fill_parent"
-			 	    android:layout_height="wrap_content"
-			 	    android:layout_margin="5dip"
-			 	    android:text="Cancelar" />
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_alignLeft="@+id/tableLayout1"
+        android:layout_below="@+id/textView1"
+        android:layout_marginTop="5dp"
+        android:background="#cccccc" >
 
-			 </TableRow>
-		 </TableLayout>
+        <Button
+            android:id="@+id/btnCamera"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:text="@string/obter_camera" />
+
+        <Button
+            android:id="@+id/btnGaleria"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/btnCamera"
+            android:text="@string/obter_galeria" />
+    </RelativeLayout>
 
 </RelativeLayout>

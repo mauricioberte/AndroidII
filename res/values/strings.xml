@@ -7,5 +7,11 @@
     <string name="title_activity_visualizar_foto">VisualizarFotoActivity</string>
     <string name="title_activity_envia_imagem">EnviaImagemActivity</string>
     <string name="imagem">Imagem</string>
+    <string name="camera">Câmera</string>
+    <string name="galeria">Galeria</string>
+    <string name="enviar_imagem">Enviar Imagem</string>
+    <string name="obter_camera">Obter da Câmera</string>
+    <string name="obter_galeria">Obter da Galeria</string>
+    <string name="selecionar_imagem">Selecionar imagem para envio:</string>
 
 </resources>
