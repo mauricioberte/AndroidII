@@ -40,13 +40,13 @@ public class ListaFotosActivity extends ListActivity {
 			this.listarTask = new ListarFotosTask(this);
 			this.listarTask.execute();
 		} else {
-			Toast.makeText(getBaseContext(), "Não foi detectada uma conexão com a Internet.", Toast.LENGTH_LONG).show();
-			Toast.makeText(getBaseContext(), "Por favor ative uma conexão de Internet",  Toast.LENGTH_LONG).show();
+			Toast.makeText(getBaseContext(), "N√£o foi detectada uma conex√£o com a Internet.", Toast.LENGTH_LONG).show();
+			Toast.makeText(getBaseContext(), "Por favor ative uma conex√£o de Internet",  Toast.LENGTH_LONG).show();
 		}
 	}
 
 	/*
-	 * Função para verificar existência de conexão com a internet
+	 * FunÔøΩÔøΩo para verificar existÔøΩncia de conexÔøΩo com a internet
 	 */
 	public boolean verificaConexao() {
 		boolean conectado;

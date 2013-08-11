@@ -78,7 +78,7 @@ public class EnviaImagemActivity extends Activity {
 	
 	        	ContentValues values = new ContentValues();
 	        	values.put(MediaStore.Images.Media.TITLE, nomeFoto);
-	        	values.put(MediaStore.Images.Media.DESCRIPTION,"Imagem capturada da C뎜era");
+	        	values.put(MediaStore.Images.Media.DESCRIPTION,"Imagem capturada da C창mera");
 	        	//salva para uso posterior
 	        	imagemUri = getContentResolver().insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, values);
 	        	//cria novo Intent
@@ -141,7 +141,7 @@ public class EnviaImagemActivity extends Activity {
 				        is = entity.getContent();
 
 				   }catch(Exception e){
-				        Log.v("log_tag", "Falha na conex땚 "+e.toString());
+				        Log.v("log_tag", "Falha na conex찾o "+e.toString());
 				   }
 			return "Successo";
 		}
@@ -180,7 +180,7 @@ public class EnviaImagemActivity extends Activity {
             	bitmap = null;   
             }
         })
-        .setNegativeButton("N땚", new DialogInterface.OnClickListener()
+        .setNegativeButton("N찾o", new DialogInterface.OnClickListener()
         {
             @Override
             public void onClick(DialogInterface dialog, int which) {
@@ -213,9 +213,9 @@ public class EnviaImagemActivity extends Activity {
 						 imagemUriSelecionada = imagemUri;
 	
 				    } else if (resultCode == RESULT_CANCELED) {
-		 		        Toast.makeText(this, "Imagem n땚 obtida", Toast.LENGTH_SHORT).show();
+		 		        Toast.makeText(this, "Imagem n찾o obtida", Toast.LENGTH_SHORT).show();
 		 		    } else {
-		 		    	Toast.makeText(this, "Imagem n땚 obtida", Toast.LENGTH_SHORT).show();
+		 		    	Toast.makeText(this, "Imagem n찾o obtida", Toast.LENGTH_SHORT).show();
 		 		    }
 					 break;
 			}
